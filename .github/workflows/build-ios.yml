@@ -4,9 +4,11 @@ on:
   push:
     branches:
       - master
+      - with-admob
   pull_request:
     branches:
       - master
+      - with-admob
 
 jobs:
   build:
