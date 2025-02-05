@@ -46,6 +46,13 @@ jobs:
       env:
         DISPLAY: :99.0
         
+    - name: Run Admob scripts
+      run: |
+        cd ./build/empty-test/ios/plugins/poing-godot-admob/scripts
+        chmod +x update_and_install.sh
+        ./update_and_install.sh
+        cd ../../../../../../
+        
     - name: Set iOS Deployment Target
       run: sed -i '' 's/IPHONEOS_DEPLOYMENT_TARGET = 10.0;/IPHONEOS_DEPLOYMENT_TARGET = 12.0;/' build/empty-test.xcodeproj/project.pbxproj
 
