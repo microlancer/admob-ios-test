@@ -58,7 +58,7 @@ jobs:
 
     - name: Build iOS project
       run: |
-        xcodebuild -project build/empty-test.xcodeproj \
+        xcodebuild -project build/empty-test.xcworkspace \
         -scheme empty-test \
         -configuration Development \
         -archivePath build/empty-test.xcarchive archive \
